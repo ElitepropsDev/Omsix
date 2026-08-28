@@ -48,7 +48,7 @@ Ensure you have Node.js (v18.0 or higher) and npm installed on your machine.
 2. Installation
 Clone the repository and install dependencies:
 
-git clone (https://github.com/your-username/omsix-website.git)
+git clone (https://github.com/ElitepropsDev/Omsix.git)
 cd omsix-website
 npm install
 
