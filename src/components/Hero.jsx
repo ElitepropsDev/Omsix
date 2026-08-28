@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import dashboardImg from '../assets/business-growth-dashboard.png';
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -217,7 +218,7 @@ const Hero = () => {
             className="group relative z-10 w-full overflow-hidden rounded-3xl border border-pink-500/30 bg-[#080511]/70 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(236,72,153,0.2)] backdrop-blur-xl transition-all duration-500 hover:border-pink-500/60 hover:shadow-[0_20px_60px_rgba(236,72,153,0.35)]"
           >
             <img
-              src="/src/assets/business-growth-dashboard.png"
+              src={dashboardImg} alt="Business Growth Dashboard"
               alt="Business Growth Dashboard Visual"
               className="h-auto w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.01]"
             />
