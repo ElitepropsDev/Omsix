@@ -219,7 +219,6 @@ const Hero = () => {
           >
             <img
               src={dashboardImg} alt="Business Growth Dashboard"
-              alt="Business Growth Dashboard Visual"
               className="h-auto w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.01]"
             />
             <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-t from-[#05050d]/40 via-transparent to-transparent" />
