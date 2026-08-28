@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import dashboardImg from '../assets/business-growth-dashboard.png';
+import dashboardImg from "../assets/business-growth-dashboard.png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -87,7 +87,13 @@ const Hero = () => {
             strokeDasharray="4 4"
           />
           <defs>
-            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="wave-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
               <stop offset="30%" stopColor="#ec4899" stopOpacity="0.7" />
               <stop offset="70%" stopColor="#ef4444" stopOpacity="0.4" />
@@ -102,7 +108,6 @@ const Hero = () => {
       ====================================================== */}
 
       <div className="relative z-10 mx-auto grid max-w-[1400px] items-center gap-8 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-12 lg:pb-24 lg:pt-36">
-        
         {/* LEFT CONTENT CONTAINER */}
         <motion.div
           variants={containerVariants}
@@ -110,9 +115,11 @@ const Hero = () => {
           animate="visible"
           className="relative z-20 flex flex-col items-center text-center lg:items-start lg:text-left"
         >
-          
           {/* 1. BADGE */}
-          <motion.div variants={itemVariants} className="mb-6 inline-flex items-center gap-2 rounded-full border border-pink-500/50 bg-pink-500/[0.04] px-3 py-2">
+          <motion.div
+            variants={itemVariants}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-pink-500/50 bg-pink-500/[0.04] px-3 py-2"
+          >
             <span className="h-1.5 w-1.5 rounded-full bg-pink-500 shadow-[0_0_10px_#ec4899]" />
             <span className="text-[9px] font-medium tracking-wide text-pink-300 sm:text-[10px]">
               DIGITAL SOLUTIONS. BUSINESS GROWTH. CREATIVE EXECUTION.
@@ -120,19 +127,25 @@ const Hero = () => {
           </motion.div>
 
           {/* 2. MOBILE IMAGE */}
-          <motion.div variants={itemVariants} className="mb-8 block w-full max-w-[550px] lg:hidden">
+          <motion.div
+            variants={itemVariants}
+            className="mb-8 block w-full max-w-[550px] lg:hidden"
+          >
             <div className="group relative z-10 w-full overflow-hidden rounded-2xl border border-pink-500/30 bg-[#080511]/70 p-2 shadow-[0_15px_35px_rgba(0,0,0,0.8),0_0_30px_rgba(236,72,153,0.2)] backdrop-blur-xl">
               <img
-                src="/src/assets/business-growth-dashboard.png"
+                src={dashboardImg}
                 alt="Business Growth Dashboard Visual"
-                className="h-auto w-full rounded-xl object-cover"
+                className="block h-auto w-full rounded-xl object-cover"
               />
               <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-[#05050d]/40 via-transparent to-transparent" />
             </div>
           </motion.div>
 
           {/* 3. HEADING */}
-          <motion.h1 variants={itemVariants} className="max-w-3xl text-[46px] font-semibold leading-[1.1] tracking-[-0.04em] sm:text-6xl lg:text-[72px]">
+          <motion.h1
+            variants={itemVariants}
+            className="max-w-3xl text-[46px] font-semibold leading-[1.1] tracking-[-0.04em] sm:text-6xl lg:text-[72px]"
+          >
             Digital Solutions.
             <br />
             Business Growth.
@@ -143,20 +156,29 @@ const Hero = () => {
           </motion.h1>
 
           {/* 4. DESCRIPTION */}
-          <motion.p variants={itemVariants} className="mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg">
-            We help businesses start, build, improve and grow through
-            practical digital and business solutions.
+          <motion.p
+            variants={itemVariants}
+            className="mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg"
+          >
+            We help businesses start, build, improve and grow through practical
+            digital and business solutions.
           </motion.p>
 
-          <motion.p variants={itemVariants} className="mt-3 max-w-xl text-sm leading-6 text-white/45">
-            From establishing your business presence to building the
-            digital tools that support your operations, we bring business
-            thinking, technology and creative execution together.
+          <motion.p
+            variants={itemVariants}
+            className="mt-3 max-w-xl text-sm leading-6 text-white/45"
+          >
+            From establishing your business presence to building the digital
+            tools that support your operations, we bring business thinking,
+            technology and creative execution together.
           </motion.p>
 
           {/* 5. CALL TO ACTION BUTTONS */}
-          <motion.div variants={itemVariants} className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <motion.button 
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+          >
+            <motion.button
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="group flex items-center justify-center gap-8 rounded-xl bg-gradient-to-r from-pink-600 to-orange-500 px-6 py-4 text-sm font-semibold shadow-[0_10px_35px_rgba(236,72,153,0.25)] transition-all duration-300 hover:shadow-[0_15px_40px_rgba(236,72,153,0.4)]"
@@ -168,7 +190,7 @@ const Hero = () => {
               />
             </motion.button>
 
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="group flex items-center justify-center gap-5 rounded-xl border border-white/20 bg-white/[0.02] px-6 py-4 text-sm font-medium transition-all duration-300 hover:border-pink-500/60 hover:bg-pink-500/5"
@@ -182,7 +204,10 @@ const Hero = () => {
           </motion.div>
 
           {/* 6. SOCIAL PROOF */}
-          <motion.div variants={itemVariants} className="mt-9 flex items-center justify-center gap-4 lg:justify-start">
+          <motion.div
+            variants={itemVariants}
+            className="mt-9 flex items-center justify-center gap-4 lg:justify-start"
+          >
             <div className="flex -space-x-2">
               {["👨🏽", "👩🏽", "👨🏾", "👩🏾"].map((avatar, index) => (
                 <div
@@ -212,22 +237,22 @@ const Hero = () => {
           <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-pink-600/30 to-purple-600/20 blur-[120px]" />
 
           {/* Floating image container */}
-          <motion.div 
-  animate={{ y: [0, -10, 0] }}
-  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-  className="group relative z-10 w-full overflow-hidden rounded-3xl border border-pink-500/30 bg-[#080511]/70 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(236,72,153,0.2)] backdrop-blur-xl transition-all duration-500 hover:border-pink-500/60 hover:shadow-[0_20px_60px_rgba(236,72,153,0.35)]"
->
-  <img
-  src={dashboardImg}
-  alt="Business Growth Dashboard Visual"
-  loading="eager"
-  className="block h-auto w-full min-w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-/>
-  <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-t from-[#05050d]/40 via-transparent to-transparent" />
-</motion.div>
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="group relative z-10 w-full overflow-hidden rounded-3xl border border-pink-500/30 bg-[#080511]/70 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(236,72,153,0.2)] backdrop-blur-xl transition-all duration-500 hover:border-pink-500/60 hover:shadow-[0_20px_60px_rgba(236,72,153,0.35)]"
+          >
+            <img
+              src={dashboardImg}
+              alt="Business Growth Dashboard Visual"
+              loading="eager"
+              className="block h-auto w-full min-w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+            />
+            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-t from-[#05050d]/40 via-transparent to-transparent" />
+          </motion.div>
 
           {/* Floating Live Indicator Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
@@ -242,7 +267,6 @@ const Hero = () => {
             </span>
           </motion.div>
         </motion.div>
-
       </div>
 
       {/* Bottom fade gradient */}
