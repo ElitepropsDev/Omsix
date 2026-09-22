@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import logo from "../assets/logo3.png"; 
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,14 +23,13 @@ const Header = () => {
         }}
       >
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-1 group">
-          <span className="text-2xl font-extrabold tracking-tight text-white">
-            OM
-            <span className="bg-gradient-to-r from-pink-200 to-red-400 bg-clip-text text-transparent">
-              SIX
-            </span>
-          </span>
-        </a>
+        <a href="#" className="flex items-center group">
+  <img 
+    src={logo} 
+    alt="Omsix Logo" 
+    className="h-8 sm:h-10 w-auto object-contain" 
+  />
+</a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

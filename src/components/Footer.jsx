@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import logo from "../assets/logo4.png"; 
 
 const Footer = () => {
   return (
@@ -11,9 +12,13 @@ const Footer = () => {
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-12 text-center">
         {/* Brand Name */}
-        <h3 className="text-2xl font-bold tracking-wider text-white">
-          OMSIX
-        </h3>
+        <a href="#" className="inline-block">
+  <img 
+    src={logo} 
+    alt="Omsix Logo" 
+    className="h-8 sm:h-10 w-auto object-contain" 
+  />
+</a>
 
         {/* Services Line */}
         <p className="mt-3 text-xs sm:text-sm font-medium tracking-wide text-white/70">
