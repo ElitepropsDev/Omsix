@@ -22,6 +22,10 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Asset imports for brand logos
+import enedaveLogo from "../assets/enedave1.jpg"; 
+import excelNavigoLogo from "../assets/excelnavigo2.png";
+
 const HeroStyleBackground = ({ mouseX, mouseY }) => {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -130,64 +134,17 @@ const SelectedProjects = () => {
     },
   ];
 
+  // Currently set to 2 active brand logos (room for 4 in the row on mobile)
   const brandLogos = [
     { 
       name: "ENEDAVE", 
       tag: "Agricultural Brand",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v12l-12 7.5-12-7.5v-12l12-7.5z"/>
-          <circle cx="20" cy="20" r="5" />
-        </svg>
-      )
+      logoSrc: enedaveLogo
     },
     { 
       name: "ExcelNavigo", 
       tag: "EdTech Identity",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M12 8l16 12-16 12V8zm4 7v10l6.67-5L16 15z" />
-          <path d="M30 6v28h-3V6h3z" />
-        </svg>
-      )
-    },
-    { 
-      name: "Valenkor", 
-      tag: "Industrial Brand",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M6 32L20 6l14 26H6zm14-18l-8 14h16l-8-14z" />
-        </svg>
-      )
-    },
-    { 
-      name: "Excel Career Plus", 
-      tag: "Agency Identity",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M20 4a16 16 0 100 32 16 16 0 000-32zm0 6a10 10 0 110 20 10 10 0 010-20z"/>
-          <path d="M18 14h4v12h-4z"/>
-          <path d="M14 18h12v4H14z"/>
-        </svg>
-      )
-    },
-    { 
-      name: "AgriTech Global", 
-      tag: "Brand Assets",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M20 4L6 12v16l14 8 14-8V12L20 4zm0 20a4 4 0 110-8 4 4 0 010 8z" />
-        </svg>
-      )
-    },
-    { 
-      name: "Apex Solutions", 
-      tag: "Identity System",
-      svg: (
-        <svg viewBox="0 0 40 40" className="h-8 w-8 text-pink-400 fill-current">
-          <path d="M20 6L4 34h32L20 6zm0 8l9 16H11l9-16z" />
-        </svg>
-      )
+      logoSrc: excelNavigoLogo
     }
   ];
 
@@ -478,6 +435,7 @@ const SelectedProjects = () => {
           </div>
         </div>
 
+        {/* 2. BRANDING & CREATIVE SECTION */}
         <div className="mt-16 sm:mt-20">
           <div className="flex items-center gap-3 mb-6">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-500/20 text-pink-400 border border-pink-500/30 shrink-0">
@@ -489,23 +447,31 @@ const SelectedProjects = () => {
             </div>
           </div>
 
-          {/* Clean Cluster Grid with Dummy SVG Logos */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+          {/* Straight horizontal line layout: grid-cols-4 for mobile view, scaling up smoothly */}
+          <div className="grid grid-cols-4 gap-3 sm:gap-6 items-center justify-items-center max-w-3xl mx-auto">
             {brandLogos.map((brand, idx) => (
               <div 
                 key={idx}
-                className="group relative flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition-all duration-300 hover:border-pink-500/40 hover:bg-white/10 hover:shadow-[0_10px_25px_rgba(236,72,153,0.15)]"
+                className="group flex flex-col items-center justify-center p-2 transition-transform duration-300 hover:scale-105"
               >
-                {/* SVG Logo Container */}
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 p-2.5 text-pink-400 group-hover:scale-110 group-hover:border-pink-500/40 transition-all">
-                  {brand.svg}
+                {/* Borderless raw image container */}
+                <div className="flex h-20 w-20 sm:h-28 sm:w-28 items-center justify-center">
+                  {brand.logoSrc ? (
+                    <img 
+                      src={brand.logoSrc} 
+                      alt={brand.name} 
+                      className="h-full w-full object-contain rounded-xl drop-shadow-md" 
+                    />
+                  ) : (
+                    brand.svg
+                  )}
                 </div>
 
-                <span className="mt-3.5 text-xs font-semibold text-white/90 text-center truncate w-full">
+                <span className="mt-2 text-xs font-semibold text-white/90 text-center truncate w-full">
                   {brand.name}
                 </span>
                 
-                <span className="text-[10px] text-pink-300/70 mt-0.5 truncate w-full text-center">
+                <span className="text-[10px] text-pink-300/80 truncate w-full text-center hidden sm:block">
                   {brand.tag}
                 </span>
               </div>
@@ -513,6 +479,7 @@ const SelectedProjects = () => {
           </div>
         </div>
 
+        {/* Bottom Callout Banner */}
         <div className="mt-12 sm:mt-16 flex flex-col items-center justify-between gap-5 rounded-3xl border border-white/15 bg-white/5 p-6 sm:p-8 backdrop-blur-2xl sm:flex-row">
           <div className="flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-500/20 text-pink-400 shrink-0">
