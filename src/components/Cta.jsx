@@ -156,10 +156,10 @@ const CTASection = () => {
           <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-white/15 bg-[#0b0716]/80 p-8 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
             <div>
               <h3 className="text-2xl font-semibold text-white">
-                Get in Touch Directly
+                Get in Touch
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-white/70">
-                Prefer to drop an email directly? Reach out through any of our channels and we will get back to you within 24 hours.
+                Reach out through any of our channels.
               </p>
 
               <div className="mt-8 space-y-6">
@@ -179,34 +179,6 @@ const CTASection = () => {
                     </a>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 shrink-0">
-                    <MessageSquare size={18} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider">
-                      Discussion
-                    </h4>
-                    <p className="text-sm text-white/90">
-                      Open for consultation & system planning.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
-                    <Globe size={18} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider">
-                      Location
-                    </h4>
-                    <p className="text-sm text-white/90">
-                      Global & Remote-First Delivery
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -217,7 +189,7 @@ const CTASection = () => {
                 <span>Our Engagement Promise</span>
               </div>
               <p className="mt-2 text-xs text-white/70 leading-relaxed">
-                Clear communication, practical milestones, and transparent technical execution from day one.
+                Clear communication, practical milestones, and transparent execution from day one.
               </p>
             </div>
           </div>
@@ -253,25 +225,9 @@ const CTASection = () => {
                   {/* Service Selector Chips */}
                   <div>
                     <label className="block text-xs font-medium text-white/70 mb-3">
-                      What are you interested in?
+                      What can we help you with?
                     </label>
-                    <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                      {services.map((item) => (
-                        <button
-                          key={item.id}
-                          type="button"
-                          onClick={() => setSelectedService(item.id)}
-                          className={`flex items-center justify-center gap-2 rounded-xl border px-3 py-2.5 text-xs font-medium transition-all ${
-                            selectedService === item.id
-                              ? "border-pink-500/80 bg-pink-500/20 text-white shadow-[0_0_15px_rgba(236,72,153,0.3)]"
-                              : "border-white/10 bg-white/5 text-white/60 hover:border-white/20 hover:text-white"
-                          }`}
-                        >
-                          {item.icon}
-                          <span className="truncate">{item.label}</span>
-                        </button>
-                      ))}
-                    </div>
+                    
                   </div>
 
                   {/* Inputs */}

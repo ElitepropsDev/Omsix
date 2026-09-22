@@ -210,10 +210,10 @@ const ProcessVerticalTimeline = () => {
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row max-w-4xl mx-auto">
             <div>
               <h4 className="text-lg font-semibold text-white">
-                Ready to get your project moving?
+               Ready to get your project moving?
               </h4>
               <p className="mt-1 text-xs text-white/70">
-                Pick a package or tell us about your goals — we'll handle the technical heavy lifting.
+                Tell us what you're trying to achieve or what needs solving - we'll help determine the right path
               </p>
             </div>
             <button className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-orange-500 px-6 py-3.5 text-xs font-semibold text-white shadow-lg transition-all hover:opacity-90">

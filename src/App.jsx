@@ -16,7 +16,7 @@ export default function App() {
       <Header/>
       <Hero />
       <Service />
-      <Pricing />
+      {/* <Pricing /> */}
       <Proposition />
       <SelectedProjects />
       <Process />

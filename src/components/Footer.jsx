@@ -17,7 +17,7 @@ const Footer = () => {
 
         {/* Services Line */}
         <p className="mt-3 text-xs sm:text-sm font-medium tracking-wide text-white/70">
-          Digital Solutions <span className="text-pink-400 mx-1.5">•</span> Business Development <span className="text-pink-400 mx-1.5">•</span> Creative &amp; Media <span className="text-pink-400 mx-1.5">•</span> Travel &amp; Documentation
+          Digital Solutions <span className="text-pink-400 mx-1.5">•</span> Business Development <span className="text-pink-400 mx-1.5">•</span> Creative &amp; Media <span className="text-pink-400 mx-1.5"></span> 
         </p>
 
         {/* Divider */}
